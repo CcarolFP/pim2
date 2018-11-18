@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include <locale.h>
+//Declaração de variaveis para a realização do cadastro de cada particiapnete dentro do Struct
+    struct participante
+{
+    char nome[30];
+    char rg[30];
+    char email[30];
+    int dataNascimento;
+    int senha;
+};//struct
+   struct participante p1;
+    main()
+{
+    setlocale(LC_ALL, "Portuguese");
+    printf("\t\t\t\tSEAT SYSTEM\n\n");
+
+    system("COLOR 04");
+    int matriz[11][31],x,y;
+    char letra = 'A';
+    for ( x=1; x<11; x++){
+        printf(" %c ", letra);
+       for ( y=1; y<31; y++)
+        {
+          matriz[x][y] = y;
+          printf("%d ", matriz[x][y]);
+        }//for
+        printf("\n");
+        letra++;
+    }//for
+    int op,assentos[31],status[31],i,nassentos,achou;
+
+        op = 1;
+        while(op!=8)
+        {
+        printf("\n1 - Cadastrar Participante\n");
+        printf("2 - Dados do Participante\n");
+        printf("3 - Escolher Assento\n");
+        printf("4 - Listar Assentos Ocupados\n");
+        printf("5 - Listar Assentos Livres\n");
+        printf("6 - Alterar Assento\n");
+        printf("7 - Excluir Reserva de Assento\n");
+        printf("8 - Sair\n");
+        printf("POR FAVOR SELECIONE UMA OPÇÃO: ");
+        scanf("%d", &op);
+        }//while
+        if(op==1){
+            printf("Cadastro do Participante:\n");
+            printf("Informe seu nome:\n");
+            getch();
+        }
+}//main
